@@ -149,7 +149,7 @@ router.post('/recommend', verifyToken, async (req, res) => {
     const userMessage = buildUserMessage(req.body);
 
     const stream = await client.messages.stream({
-      model: 'claude-sonnet-4',
+      model: 'claude-sonnet-4-5',
       max_tokens: 4096,
       system: systemPrompt,
       messages: [{ role: 'user', content: userMessage }],
