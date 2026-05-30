@@ -1,12 +1,11 @@
 #!/bin/bash
 
-# Build frontend if dist doesn't exist
-if [ ! -d "dist" ]; then
-  echo "Building frontend..."
-  npm run build
-fi
+echo "Building frontend..."
+npm run build
 
-# Start the backend server
-# The backend will serve the built frontend from the dist folder
+echo "Installing backend dependencies..."
 cd backend
+npm install
+
+echo "Starting backend server..."
 node server.js

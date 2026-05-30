@@ -15,6 +15,8 @@ const PORT = process.env.PORT || 5000;
 // Get __dirname for ES modules
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+const projectRoot = path.resolve(__dirname, '..');
+const distPath = path.join(projectRoot, 'dist');
 
 // Middleware
 app.use(cors({
@@ -25,7 +27,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Serve static files from dist folder (built React app)
-app.use(express.static(path.join(__dirname, '../dist')));
+app.use(express.static(distPath));
+
+console.log(`📁 Serving static files from: ${distPath}`);
 
 // Health check endpoint
 app.get('/health', (req, res) => {
@@ -39,7 +43,7 @@ app.use('/api/advisor', advisorRouter);
 
 // Serve React app for all other routes (SPA fallback)
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../dist/index.html'));
+  res.sendFile(path.join(distPath, 'index.html'));
 });
 
 // Error handler
