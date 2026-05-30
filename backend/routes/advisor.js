@@ -149,7 +149,7 @@ router.post('/recommend', verifyToken, async (req, res) => {
     const userMessage = buildUserMessage(req.body);
 
     const stream = await client.messages.stream({
-      model: 'claude-sonnet-4',
+      model: 'claude-3-5-sonnet-20241022',
       max_tokens: 4096,
       system: systemPrompt,
       messages: [{ role: 'user', content: userMessage }],
@@ -166,16 +166,16 @@ router.post('/recommend', verifyToken, async (req, res) => {
     res.write(`data: ${JSON.stringify({ type: 'done' })}\n\n`);
     res.end();
   } catch (error) {
-    console.error('Claude API error:', error);
+    console.error('Claude API error:', error.message || error);
 
     // If headers already sent, send error as SSE event
     if (res.headersSent) {
       res.write(
-        `data: ${JSON.stringify({ type: 'error', content: 'An error occurred while generating recommendations. Please try again.' })}\n\n`
+        `data: ${JSON.stringify({ type: 'error', content: error.message || 'An error occurred while generating recommendations. Please try again.' })}\n\n`
       );
       res.end();
     } else {
-      res.status(502).json({ error: 'Failed to get AI recommendations. Please try again.' });
+      res.status(502).json({ error: error.message || 'Failed to get AI recommendations. Please try again.' });
     }
   }
 
