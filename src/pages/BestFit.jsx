@@ -24,7 +24,7 @@ export default function BestFit() {
 
   // Ref to cancel ongoing fetch
   const abortControllerRef = useRef(null);
-  const streamEndRef = useRef(null);
+  const streamBoxRef = useRef(null);
 
   // Clean up stream on unmount
   useEffect(() => {
@@ -35,10 +35,10 @@ export default function BestFit() {
     };
   }, []);
 
-  // Auto-scroll stream box as it prints
+  // Auto-scroll only inside the stream box, not the whole page
   useEffect(() => {
-    if (isLoading && streamEndRef.current) {
-      streamEndRef.current.scrollIntoView({ block: 'nearest', behavior: 'auto' });
+    if (isLoading && streamBoxRef.current) {
+      streamBoxRef.current.scrollTop = streamBoxRef.current.scrollHeight;
     }
   }, [rawStreamText, isLoading]);
 
@@ -410,10 +410,9 @@ export default function BestFit() {
           {rawStreamText ? (
             <div>
               <h2 className="text-lg font-semibold text-on-surface mb-2">Detailed AI Consultation</h2>
-              <div className="stream-box">
+              <div className="stream-box" ref={streamBoxRef}>
                 {renderMarkdown(rawStreamText)}
                 {isLoading && <span className="typing-cursor"></span>}
-                <div ref={streamEndRef} />
               </div>
             </div>
           ) : (

@@ -1239,6 +1239,9 @@ body {
   color: var(--color-text-primary);
   box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.02);
   margin-top: var(--spacing-lg);
+  max-height: 600px;
+  overflow-y: auto;
+  scroll-behavior: smooth;
 }
 
 .stream-box h2, .stream-box h3 {
