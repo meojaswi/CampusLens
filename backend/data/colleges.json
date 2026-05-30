@@ -1,0 +1,265 @@
+[
+  {
+    "id": 1,
+    "name": "IIT Bombay",
+    "city": "Mumbai",
+    "state": "Maharashtra",
+    "type": "Government",
+    "rating": 4.8,
+    "feesMin": 80000,
+    "feesMax": 250000,
+    "logo": "IITB",
+    "established": 1958,
+    "naac": "A++",
+    "nirfRank": 1,
+    "totalStudents": 10000,
+    "overview": "Premier technical institute, consistently ranked #1 in India. Known for exceptional research output and alumni network spanning top global companies.",
+    "courses": [
+      { "name": "B.Tech CSE", "fees": 250000, "seats": 120, "duration": "4 years" },
+      { "name": "B.Tech EE", "fees": 230000, "seats": 90, "duration": "4 years" },
+      { "name": "M.Tech AI", "fees": 18000, "seats": 60, "duration": "2 years" },
+      { "name": "PhD", "fees": 12000, "seats": 40, "duration": "5 years" }
+    ],
+    "placements": {
+      "avg": 28.5,
+      "highest": 280,
+      "percent": 95,
+      "recruiters": ["Google", "Microsoft", "Goldman Sachs", "DE Shaw", "Apple"]
+    },
+    "reviews": [
+      {
+        "id": 1,
+        "author": "Rahul M",
+        "year": "2023",
+        "rating": 5,
+        "comment": "Best faculty and infrastructure in India. Research opportunities are unmatched.",
+        "pros": "Research, Alumni network, Peer quality",
+        "cons": "Extremely competitive, High pressure"
+      },
+      {
+        "id": 2,
+        "author": "Priya S",
+        "year": "2022",
+        "rating": 4,
+        "comment": "Amazing placement record. The brand name opens every door.",
+        "pros": "Industry exposure, Brand value",
+        "cons": "Work-life balance is difficult"
+      }
+    ],
+    "examCutoffs": [
+      { "exam": "JEE Advanced", "category": "General", "rankMin": 1, "rankMax": 100 },
+      { "exam": "JEE Advanced", "category": "OBC", "rankMin": 50, "rankMax": 300 },
+      { "exam": "JEE Advanced", "category": "SC", "rankMin": 200, "rankMax": 800 }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "NIT Trichy",
+    "city": "Tiruchirappalli",
+    "state": "Tamil Nadu",
+    "type": "Government",
+    "rating": 4.5,
+    "feesMin": 70000,
+    "feesMax": 150000,
+    "logo": "NITT",
+    "established": 1964,
+    "naac": "A++",
+    "nirfRank": 8,
+    "totalStudents": 7500,
+    "overview": "Top NIT known for excellent placements and strong industry-academia collaboration. One of the oldest NITs in India.",
+    "courses": [
+      { "name": "B.Tech CSE", "fees": 150000, "seats": 100, "duration": "4 years" },
+      { "name": "B.Tech Mechanical", "fees": 140000, "seats": 120, "duration": "4 years" },
+      { "name": "MBA", "fees": 200000, "seats": 60, "duration": "2 years" }
+    ],
+    "placements": {
+      "avg": 18.2,
+      "highest": 150,
+      "percent": 90,
+      "recruiters": ["Amazon", "Infosys", "TCS", "Wipro", "Samsung"]
+    },
+    "reviews": [
+      {
+        "id": 1,
+        "author": "Arun K",
+        "year": "2023",
+        "rating": 5,
+        "comment": "Great placement cell. Seniors are very helpful.",
+        "pros": "Placement support, Peer quality",
+        "cons": "Remote location"
+      }
+    ],
+    "examCutoffs": [
+      { "exam": "JEE Main", "category": "General", "rankMin": 1000, "rankMax": 5000 },
+      { "exam": "JEE Main", "category": "OBC", "rankMin": 2000, "rankMax": 8000 }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "BITS Pilani",
+    "city": "Pilani",
+    "state": "Rajasthan",
+    "type": "Deemed",
+    "rating": 4.6,
+    "feesMin": 400000,
+    "feesMax": 550000,
+    "logo": "BITS",
+    "established": 1964,
+    "naac": "A",
+    "nirfRank": 23,
+    "totalStudents": 8000,
+    "overview": "Top private engineering institute with unique WILP and Practice School programs. Highly autonomous learning environment.",
+    "courses": [
+      { "name": "B.E. CSE", "fees": 550000, "seats": 150, "duration": "4 years" },
+      { "name": "B.E. ECE", "fees": 530000, "seats": 120, "duration": "4 years" },
+      { "name": "M.Sc. Maths+CSE", "fees": 400000, "seats": 80, "duration": "5 years" }
+    ],
+    "placements": {
+      "avg": 22.0,
+      "highest": 200,
+      "percent": 88,
+      "recruiters": ["Microsoft", "Uber", "Flipkart", "PayPal", "Adobe"]
+    },
+    "reviews": [
+      {
+        "id": 1,
+        "author": "Vikram P",
+        "year": "2023",
+        "rating": 5,
+        "comment": "Freedom unlike any other college in India. You shape your own curriculum.",
+        "pros": "WILP program, Startup culture, Freedom",
+        "cons": "Very high fees, Isolated campus"
+      }
+    ],
+    "examCutoffs": [
+      { "exam": "BITSAT", "category": "General", "rankMin": 1, "rankMax": 280 },
+      { "exam": "BITSAT", "category": "General (ECE)", "rankMin": 250, "rankMax": 350 }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "VIT Vellore",
+    "city": "Vellore",
+    "state": "Tamil Nadu",
+    "type": "Deemed",
+    "rating": 4.1,
+    "feesMin": 180000,
+    "feesMax": 350000,
+    "logo": "VIT",
+    "established": 1984,
+    "naac": "A++",
+    "nirfRank": 11,
+    "totalStudents": 35000,
+    "overview": "Largest private engineering university with strong industry connections and active campus life.",
+    "courses": [
+      { "name": "B.Tech CSE", "fees": 350000, "seats": 900, "duration": "4 years" },
+      { "name": "B.Tech AIDS", "fees": 350000, "seats": 300, "duration": "4 years" },
+      { "name": "MBA", "fees": 280000, "seats": 200, "duration": "2 years" }
+    ],
+    "placements": {
+      "avg": 7.5,
+      "highest": 110,
+      "percent": 72,
+      "recruiters": ["Cognizant", "Capgemini", "HCL", "Mindtree", "Zoho"]
+    },
+    "reviews": [
+      {
+        "id": 1,
+        "author": "Ravi N",
+        "year": "2023",
+        "rating": 4,
+        "comment": "Good infrastructure and decent placement opportunities for CSE.",
+        "pros": "Large campus, Active clubs, Events",
+        "cons": "Too crowded, Some faculty quality issues"
+      }
+    ],
+    "examCutoffs": [
+      { "exam": "VITEEE", "category": "General", "rankMin": 1, "rankMax": 5000 },
+      { "exam": "VITEEE", "category": "General (CSE AI)", "rankMin": 4000, "rankMax": 15000 }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "IIM Bangalore",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "type": "Government",
+    "rating": 4.9,
+    "feesMin": 2300000,
+    "feesMax": 2500000,
+    "logo": "IIMB",
+    "established": 1973,
+    "naac": "A++",
+    "nirfRank": 1,
+    "totalStudents": 1200,
+    "overview": "Top management institute in India. Consistently ranked #1 for MBA. Known for producing CXOs and entrepreneurs.",
+    "courses": [
+      { "name": "MBA (PGP)", "fees": 2500000, "seats": 400, "duration": "2 years" },
+      { "name": "Executive MBA (PGPEM)", "fees": 2300000, "seats": 200, "duration": "1 year" },
+      { "name": "PhD", "fees": 100000, "seats": 50, "duration": "5 years" }
+    ],
+    "placements": {
+      "avg": 35.0,
+      "highest": 800,
+      "percent": 100,
+      "recruiters": ["McKinsey", "BCG", "Bain", "Goldman Sachs", "Amazon"]
+    },
+    "reviews": [
+      {
+        "id": 1,
+        "author": "Karan M",
+        "year": "2023",
+        "rating": 5,
+        "comment": "The alumni network alone is worth every rupee spent.",
+        "pros": "Alumni, Faculty, Peer quality, Global exposure",
+        "cons": "Extremely stressful, Cut-throat competition"
+      }
+    ],
+    "examCutoffs": [
+      { "exam": "CAT", "category": "General", "rankMin": 1, "rankMax": 50 },
+      { "exam": "CAT", "category": "OBC", "rankMin": 30, "rankMax": 100 }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Delhi Technological University",
+    "city": "Delhi",
+    "state": "Delhi",
+    "type": "Government",
+    "rating": 4.2,
+    "feesMin": 100000,
+    "feesMax": 180000,
+    "logo": "DTU",
+    "established": 1941,
+    "naac": "A",
+    "nirfRank": 36,
+    "totalStudents": 9000,
+    "overview": "One of the oldest engineering colleges in India, formerly Delhi College of Engineering.",
+    "courses": [
+      { "name": "B.Tech CSE", "fees": 180000, "seats": 150, "duration": "4 years" },
+      { "name": "B.Tech IT", "fees": 175000, "seats": 90, "duration": "4 years" },
+      { "name": "B.Tech ECE", "fees": 170000, "seats": 120, "duration": "4 years" }
+    ],
+    "placements": {
+      "avg": 14.0,
+      "highest": 120,
+      "percent": 82,
+      "recruiters": ["Samsung", "Adobe", "Myntra", "Zomato", "Paytm"]
+    },
+    "reviews": [
+      {
+        "id": 1,
+        "author": "Ananya T",
+        "year": "2023",
+        "rating": 4,
+        "comment": "Great college in Delhi. Placement season is exciting.",
+        "pros": "Location, Brand in NCR, Sports",
+        "cons": "Bureaucratic processes"
+      }
+    ],
+    "examCutoffs": [
+      { "exam": "JEE Main", "category": "General", "rankMin": 5000, "rankMax": 15000 },
+      { "exam": "JEE Main", "category": "OBC", "rankMin": 8000, "rankMax": 25000 }
+    ]
+  }
+]
