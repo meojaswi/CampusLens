@@ -15,8 +15,6 @@ const PORT = process.env.PORT || 5000;
 // Get __dirname for ES modules
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-const projectRoot = path.resolve(__dirname, '..');
-const distPath = path.join(projectRoot, 'dist');
 
 // Middleware
 app.use(cors({
@@ -27,9 +25,11 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Serve static files from dist folder (built React app)
+const distPath = path.resolve(__dirname, '..', 'dist');
 app.use(express.static(distPath));
 
-console.log(`📁 Serving static files from: ${distPath}`);
+console.log(`📁 Attempting to serve static files from: ${distPath}`);
+console.log(`✅ Static files configured`);
 
 // Health check endpoint
 app.get('/health', (req, res) => {
