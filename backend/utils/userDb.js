@@ -36,13 +36,14 @@ export function findUserById(id) {
 /**
  * Create new user
  */
-export function createUser(id, email, hashedPassword, name) {
+export function createUser(id, email, hashedPassword, name, picture) {
   const users = getAllUsers();
   const newUser = {
     id,
     email: email.toLowerCase(),
     password: hashedPassword,
     name,
+    picture: picture || null,
     createdAt: new Date().toISOString(),
     savedColleges: [],
     preferences: {}
