@@ -1,6 +1,8 @@
 import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
+import path from 'path';
+import { fileURLToPath } from 'url';
 import collegesRouter from './routes/colleges.js';
 import advisorRouter from './routes/advisor.js';
 import authRouter from './routes/auth.js';
@@ -10,6 +12,10 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 5000;
 
+// Get __dirname for ES modules
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 // Middleware
 app.use(cors({
   origin: process.env.FRONTEND_URL || 'http://localhost:5173',
@@ -17,6 +23,9 @@ app.use(cors({
 }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+// Serve static files from dist folder (built React app)
+app.use(express.static(path.join(__dirname, '../dist')));
 
 // Health check endpoint
 app.get('/health', (req, res) => {
@@ -28,9 +37,9 @@ app.use('/api/auth', authRouter);
 app.use('/api/colleges', collegesRouter);
 app.use('/api/advisor', advisorRouter);
 
-// 404 handler
-app.use((req, res) => {
-  res.status(404).json({ error: 'Route not found' });
+// Serve React app for all other routes (SPA fallback)
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../dist/index.html'));
 });
 
 // Error handler
